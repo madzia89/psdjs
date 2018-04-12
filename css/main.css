@@ -1,0 +1,69 @@
+body {
+    background: #ecf0f1;
+    padding-top: 3rem;
+}
+
+.box {
+    background: white;
+    border-radius: 2px;
+    margin-bottom: 30px;
+    border-top: 5px solid #1abc9c;
+    float: left;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.box:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.box h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.box h3 {
+    margin: 0;
+}
+
+.box-array {
+    max-width: none;
+    border-top: 0;
+    border-left: 4px solid #2c3e50;
+    margin-bottom: 3rem;
+}
+
+.btn > svg  {
+    margin-right: 0.5rem;
+}
+
+.box-actions {
+    margin: -0.5rem -0.5rem 0 -0.5rem;
+    text-align: right;
+}
+
+.box-actions .btn > svg  {
+    margin-right: 0;
+}
+
+.col-3:nth-child(6n + 2) .box {
+    border-top-color: #f1c40f;
+}
+
+.col-3:nth-child(6n + 3) .box {
+    border-top-color: #3498db;
+}
+
+.col-3:nth-child(6n + 4) .box {
+    border-top-color: #9b59b6;
+}
+
+.col-3:nth-child(6n + 5) .box {
+    border-top-color: #7f8c8d;
+}
+
+.col-3:nth-child(6n + 6) .box {
+    border-top-color: #e74c3c;
+}
