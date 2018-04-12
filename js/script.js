@@ -18,6 +18,23 @@ function removeFirst() {
 }
 
 
+function pushElement(){//dodatnie wpisanego tekstu na koniec tablicy
+    ////tutaj pobieramy watość z input o id = element-name
+    var value = document.getElementById("element-name").value
+    console.log(value)
+    arr.push(value)
+    updateView()
+}
+
+
+function unshiftElement(){  //dodatnie wpisanego tekstu na początek tablicy
+    ////tutaj pobieramy watość z input o id = element-name
+    var value2 = document.getElementById("element-name").value
+    console.log(value2)
+    arr.unshift(value2)
+    updateView()
+}
+
 function updateView() {
     var arrayElementsDOM = document.getElementById('array-elements');
     // Usunie mi istniejace boxy
@@ -54,3 +71,4 @@ function drawBox(arrValue, index) {
 </div>';
     arrayElementsDOM.insertAdjacentHTML('beforeend', html);
 }
+
