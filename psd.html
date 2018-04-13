@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="images/favicon.png" sizes="32x32" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <title>PSD</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Tablica</h1>
+            <div id="array" class="box box-array">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Elementy
+                <div class="row mx-auto">
+                    <div class="col-4">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <button class="btn btn-success" onclick="unshiftElement();" type="button"><i
+                                        class="fas fa-plus"></i></button>
+                            </div>
+
+                            <input id="element-name" type="text" class="form-control" placeholder="wpisz nazwę...">
+
+                            <div class="input-group-append">
+                                <button class="btn btn-success" onclick="pushElement();" type="button"><i
+                                        class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-danger float-right col-md-2 mx-1" onclick="removeFirst()">
+                        <i class="far fa-trash-alt"></i>Usuń Pierwszy
+                    </button>
+                    <button class="btn btn-danger float-right col-md-2 mx-1" onclick="removeLast()">
+                        <i class="far fa-trash-alt"></i>Usuń Ostatni
+                    </button>
+                    <button class="btn btn-primary float-right col-md-2 mx-3" onclick=window.location="">
+
+                        <i class="fas fa-sync"></i>Odśwież
+                    </button>
+                </div>
+            </h1>
+
+        </div>
+    </div>
+
+    <div id="array-elements" class="row">
+    </div>
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
+        integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+        crossorigin="anonymous"></script>
+<script src="js/psd.js"></script>
+</body>
+</html>
