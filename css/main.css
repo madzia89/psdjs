@@ -19,6 +19,15 @@ body {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
+.col-3.box-active .box {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background: #3498db;
+}
+
+.col-3.box-active .box h2 {
+    color: white;
+}
+
 .box h2 {
     margin: 0;
     text-align: center;
@@ -44,7 +53,7 @@ body {
     text-align: right;
 }
 
-.box-actions .btn > svg  {
+.box-actions .btn > svg, .input-group .btn > svg {
     margin-right: 0;
 }
 

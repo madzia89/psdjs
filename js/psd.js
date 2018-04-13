@@ -1,6 +1,64 @@
 // Przykładowa tablica
 var arr = ["Alfa Romeo", "Mercedes", "Skoda", "Ferrari", "Fiat", "Volkswagen", "Kamaz", "Audi", "Mercedes"];
 
+//
+// var arr2 = arr.map(function(value, index, array){
+//
+//     var count = 0
+//     array.forEach(function (v) {//dla każdej wartości jaką wstawimy w funkcję spradzamy czy jest taki kolejny (counter) dla każdej sumy
+//         if (v === value){
+//             count ++
+//         }
+//     })
+//         return value + '('+count+' x)'
+// })
+// console.log(arr2)
+
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+var arr2 = arr.map(function(value, index, array){
+
+    var key = array.indexOf(value)      // sprawdzamy index danej wartości
+    var count = 0                       // counter na 0
+    while (key != -1){                  // dopóki key jest różne od -1 liczymy ile jest tych indexOf
+        count ++                        // jeżeli sprawdzamy tablicę, dana wartość na pewno wystąpi chociaż 1 raz czyli jest ich tyle ile jest dopóki indexOf nie będzie -1
+        key = array.indexOf(value, key + 1)
+    }
+    return value + '('+count+' x)'
+})
+console.log(arr2)
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+
+
+
+
+function activateBox(value) {
+    console.log('Aktywuje BOXY dla wartości "' + value + '"');
+    var arrayElementsDOM = document.getElementById('array-elements');
+    var key = arr.indexOf(value);
+    var box = arrayElementsDOM.childNodes[key];
+    box.className += " box-active";
+}
+
+updateView();
+var filteredArr = arr.filter(function(value){ // filtruje wartości tablicy które są mniejszej długości lub równe 5
+    if (value.length > 5)
+        return true
+})
+
+
+var reduced = filteredArr.reduce(function(result, value){
+    return result += value.length
+},0)
+
+console.log(reduced + " suma długości przefiltorwanych samochodów")
+
+
+filteredArr.forEach(function(value) {
+    activateBox(value)  //podświetlenie filtorwanych wartości na niebiesko
+})
 
 //var arr2Dim = [
 //    ["Nazwa", "Koszt", "Rocznik"],
@@ -19,7 +77,7 @@ var arr = ["Alfa Romeo", "Mercedes", "Skoda", "Ferrari", "Fiat", "Volkswagen", "
 //    value.forEach(drawBox);
 //});
 
-updateView();
+
 
 function removeElement(key) {
     console.log('Usuwam pozycję z tablicy o kluczu "' + key + '"');
